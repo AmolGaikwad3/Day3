@@ -1,0 +1,64 @@
+Q.1JASON iterate over all for loops
+
+<script>
+        var request= new XMLHttpRequest();
+         request.open('GET','https://restcountries.com/v3.1/all')
+         request.send()
+         request.onload=function(){
+           var data=request.response
+           //console.log(JSON.parse(data))
+           var res=JSON.parse(data)
+           //console.log(res[0].area)
+           //for loop
+           for(i=0;i<res.length;i++){
+             //console.log(res[i])
+           }
+           //for of loop=> obj
+           for(var obj of res){
+            // console.log(obj)
+           }
+           //for in loop
+           for(var index in res){
+             console.log(res[index])
+           }
+       
+         }
+         
+       </script>
+
+Q.2 Resume <script>
+
+let myResume={
+    "basics": {
+      "name": "Amol Gaikwad",
+      "email": "amolgaikwad331@gmail.com",
+      "phone": 9673366110,
+      "degree": "B.E",
+      "location": {
+        "city": "Pune",
+        "state": "Maharashtra",
+        "country": "India"
+      },
+      "profiles": [
+        {
+          "github":"https://github.com/AmolGaikwad3"
+        }
+      ]
+    },
+
+    "education": [
+      {
+        "institution": "Sinhgad College Of Engineering",
+        "department": "Mechanical Engineering",
+      }
+    ],
+    "languages": [
+      {
+        "language": "Marathi,English,Hindi",
+      }
+    ],
+    
+  }
+  console.log(myResume);
+  
+    </script>
